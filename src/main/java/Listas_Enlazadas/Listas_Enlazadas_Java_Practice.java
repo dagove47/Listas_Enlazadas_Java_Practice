@@ -5,6 +5,8 @@
 
 package Listas_Enlazadas;
 
+import javax.swing.*;
+
 /**
  *
  * @author David Gomez, Gabriel Brilla, Gerald Blanco, Alexander Torres
@@ -12,6 +14,30 @@ package Listas_Enlazadas;
 public class Listas_Enlazadas_Java_Practice {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Word w = new Word();
+        int opcion = 0;
+        do {
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("Seleccione el menu al que desea ingresar:" +
+                    " \n\t1.Listas Simple\n\t2.Lista Circular\n\t3.Salir\nSeleccione lo que desea hacer (1-3)"));
+
+            switch (opcion){
+                case 1:
+                    w.operaciones();
+                    break;
+
+                case 2:
+                    //Metodo principal del segundo ejercicio
+                    break;
+
+                case 3:
+                    break;
+                    
+                default:
+                    JOptionPane.showMessageDialog(null,"La opción digitada no existe, " +
+                            "intente de nuevo...");
+            }
+        }while (opcion != 3);
+
     }
 }
