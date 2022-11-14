@@ -33,7 +33,8 @@ public class Listas_Enlazadas_Java_Practice {
                     w.operaciones();
                     break;
                 case 2:
-                    menu2();
+                    Persona p = new Persona();
+                    p.operaciones();
                     break;
                 case 3:
                     System.exit(0);
@@ -46,28 +47,5 @@ public class Listas_Enlazadas_Java_Practice {
 
     }
     
-    public static void menu2() {
-        Carro carro = new Carro();
-        
-        int loop = 0;
-        while(loop == 0) {
-            int add = JOptionPane.showConfirmDialog(null,
-                    carro + "\n" +
-                            "Desea agregar mas conductores a la fila?",
-                    "Question",JOptionPane.YES_NO_OPTION);
-            switch(add) {
-                case 0:
-                    String nombre = JOptionPane.showInputDialog(
-                            "Digite el nombre del conductor:");
-                    int edad = Integer.parseInt(JOptionPane.showInputDialog(
-                            "Digite la edad del conductor:"));
-                    carro.inserta(new Persona(nombre, edad));
-                    break;
-                default:
-                    loop = 1;
-                    break;
-            }
-        }
-        System.exit(0);
-    }
+
 }
