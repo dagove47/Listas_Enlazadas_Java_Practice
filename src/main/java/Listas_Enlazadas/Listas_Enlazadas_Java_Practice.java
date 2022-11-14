@@ -8,7 +8,6 @@ package Listas_Enlazadas;
 import javax.swing.*;
 
 /**
- *
  * @author David Gomez, Gabriel Brilla, Gerald Blanco, Alexander Torres
  */
 public class Listas_Enlazadas_Java_Practice {
@@ -18,10 +17,16 @@ public class Listas_Enlazadas_Java_Practice {
         Word w = new Word();
         int opcion = 0;
         do {
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("Seleccione el menu al que desea ingresar:" +
-                    " \n\t1.Listas Simple\n\t2.Lista Circular\n\t3.Salir\nSeleccione lo que desea hacer (1-3)"));
+            try {
+                opcion = Integer.parseInt(JOptionPane.showInputDialog("Seleccione el menu al que desea ingresar:" +
+                        " \n\t1.Listas Simple\n\t2.Lista Circular\n\t3.Salir\nSeleccione lo que desea hacer (1-3)"));
+            }catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(null,"Ingreso un dato diferente " +
+                        "de un número entero..\n" + e);
 
-            switch (opcion){
+            }
+
+            switch (opcion) {
                 case 1:
                     w.operaciones();
                     break;
@@ -32,12 +37,12 @@ public class Listas_Enlazadas_Java_Practice {
 
                 case 3:
                     break;
-                    
+
                 default:
-                    JOptionPane.showMessageDialog(null,"La opción digitada no existe, " +
+                    JOptionPane.showMessageDialog(null, "La opción digitada no existe, " +
                             "intente de nuevo...");
             }
-        }while (opcion != 3);
+        } while (opcion != 3);
 
     }
 }
