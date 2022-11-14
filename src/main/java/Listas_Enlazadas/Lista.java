@@ -2,6 +2,9 @@ package Listas_Enlazadas;
 
 import javax.swing.*;
 
+/**
+ * @author David Gomez, Gabriel Brilla, Gerald Blanco, Alexander Torres
+ */
 public class Lista {
     private Nodo cabeza;
 

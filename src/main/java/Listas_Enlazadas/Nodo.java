@@ -1,5 +1,8 @@
 package Listas_Enlazadas;
 
+/**
+ * @author David Gomez, Gabriel Brilla, Gerald Blanco, Alexander Torres
+ */
 public class Nodo {
     Nodo next;
     Word letra;
